@@ -1,6 +1,6 @@
 const units = {
-	Celcius: "&deg;C",
-	Fahrenheit: "&deg;F"
+	Celcius: "&#176;C",
+	Fahrenheit: "&#176;F"
 };
 
 const config = {
@@ -52,7 +52,7 @@ range.addEventListener("input", setTemperature);
 $.get( '/temperature', function(data) {
 	console.log(JSON.stringify(data));
 	range.value = data.temp;
-	$('#humidity').innerHTML = data.humidity;
+	$('#humidityValue').text(data.humidity);
 	setTemperature();
 });
 //setTimeout(setTemperature, 500);
