@@ -56,6 +56,6 @@ function getTemperature(){
 		setTemperature();
 	});
 }
-setInterval(getTemperature, delay);
+setInterval(getTemperature, 1000);
 
 //setTimeout(setTemperature, 500);
