@@ -48,11 +48,14 @@ function setTemperature() {
 }
 
 range.addEventListener("input", setTemperature);
+function getTemperature(){
+	$.get( '/temperature', function(data) {
+		console.log(JSON.stringify(data));
+		range.value = data.temp;
+		$('#humidityValue').text(data.humidity);
+		setTemperature();
+	});
+}
+setInterval(getTemperature, delay);
 
-$.get( '/temperature', function(data) {
-	console.log(JSON.stringify(data));
-	range.value = data.temp;
-	$('#humidityValue').text(data.humidity);
-	setTemperature();
-});
 //setTimeout(setTemperature, 500);
