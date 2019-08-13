@@ -1,6 +1,6 @@
 const units = {
-	Celcius: "°C",
-	Fahrenheit: "°F"
+	Celcius: "&deg;C",
+	Fahrenheit: "&deg;F"
 };
 
 const config = {
