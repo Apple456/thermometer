@@ -48,5 +48,6 @@ function setTemperature() {
 }
 
 range.addEventListener("input", setTemperature);
-setTimeout(setTemperature, 1000);
 
+$.get( '/temperature', function(data) {console.log(JSON.stringify(data));range.value = data.temp;$('#humidity').innerHTML = data.humidity;});
+setTimeout(setTemperature, 500);
