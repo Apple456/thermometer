@@ -53,5 +53,6 @@ $.get( '/temperature', function(data) {
 	console.log(JSON.stringify(data));
 	range.value = data.temp;
 	$('#humidity').innerHTML = data.humidity;
+	setTemperature();
 });
 //setTimeout(setTemperature, 500);
