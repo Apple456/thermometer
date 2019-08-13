@@ -266,3 +266,8 @@ input[type="range"]:disabled::-ms-fill-lower {
 input[type="range"]:disabled::-ms-fill-upper {
   cursor: not-allowed;
 }
+#humidity{
+  font-size: 30px;
+  font-weight: bolder;
+  color: cornflowerblue;
+}
