@@ -55,5 +55,5 @@ function getTemperature(){
 		setTemperature();
 	});
 }
-setInterval(getTemperature, 10000); //10 seconds
+setInterval(getTemperature, 30000); //30 seconds
 getTemperature()
