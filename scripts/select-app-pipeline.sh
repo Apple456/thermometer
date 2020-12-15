@@ -2,7 +2,7 @@
 set -euox pipefail
 
 APP_NAME="$(buildkite-agent meta-data get app-name)"
-ENV=$(buildkite-agent meta-data get env)
+ENV=$(buildkite-agent meta-data get environment)
 
 echo "
   - label: Sync new relic alerts for $APP_NAME for $ENV environments
