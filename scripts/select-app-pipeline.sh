@@ -3,7 +3,7 @@ set -euox pipefail
 
 APP_NAME="$(buildkite-agent meta-data get app-name)"
 echo "************* APPNAME $APP_NAME"
-ENV="$1"
+ENV=$1
 echo "************* ENV $ENV"
 
 echo "
