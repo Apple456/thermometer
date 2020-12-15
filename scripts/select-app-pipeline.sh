@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euox pipefail
+set -eox pipefail
 
 APP_NAME="$(buildkite-agent meta-data get app-name)"
 echo "************* APPNAME $APP_NAME"
