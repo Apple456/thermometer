@@ -9,7 +9,7 @@ echo "************* ENV $ENV"
 echo "
   - label: Sync new relic alerts for $APP_NAME for $ENV environments
     command:
-      - echo "./gradlew $APP_NAME:build $APP_NAME:syncNewRelicAlerts -Penv=$ENV -i"
+      - ./gradlew $APP_NAME:build $APP_NAME:syncNewRelicAlerts -Penv=$ENV -i
     retry:
       manual:
         permit_on_passed: true"
