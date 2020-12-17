@@ -8,7 +8,7 @@ if [ "$PRODENVIRONMENT" = true ]; then syncEnv="Prod"; else syncEnv="nonProd"; f
 echo "
   - label: Sync new relic alerts for $APP_NAME for $syncEnv environments
     command:
-      - .buildkite/docker/run-java-build.sh ./gradlew $APP_NAME:build $APP_NAME:syncNewRelicAlerts -Penv=$ENV -i
+      - .buildkite/docker/run-java-build.sh ./gradlew $APP_NAME:build $APP_NAME:syncNewRelicAlerts -Penv=$syncEnv -i
     agents:
       queue: \"payments-build\"
     retry:
